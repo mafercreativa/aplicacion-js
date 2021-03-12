@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação de Produtos</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+    <style type="text/css">
+        .strike {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary text-center">
+        <a href="/" class="navbar-brand">
+        <strong>FOR TO DO TODAY</strong>
+        </a>
+
+    </nav>
+    <div class="container">
+        <!-- Aplication -->
+        <div id="App" class="row pt-5">
+             <div class="col-md-4">
+                <div class="card bg-light">
+                    <div class="card-header">
+                        <h4>Make your list :)</h4>
+                    </div>
+                    <form id="work-form" class="card-body">
+                        <div class="form-group">
+                            <!--<label>Time</label>
+                            <input type="time" id="time" class="form-control" value="00:00">-->
+                            <span>
+                                <label for="hour">Time</label>
+                                <select id="hour" name="hour">
+                                    <option>00</option>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                    <option>04</option>
+                                    <option>05</option>
+                                    <option>06</option>
+                                    <option>07</option>
+                                    <option>08</option>
+                                    <option>09</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                              </span>
+                              <span>
+                                <select id="minute" name="minute">
+                                    <option>00</option>
+                                    <option>15</option>
+                                    <option>30</option>
+                                    <option>45</option>
+                                </select>
+                              </span>
+                              <span>
+                                <select id="meridiem">
+                                    <option>A.M.</option>
+                                    <option>P.M</option>
+                                </select>
+                              </span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="work" placeholder="What to do?" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="place" placeholder="Where?" class="form-control">
+                        </div>
+                    
+                        
+                        <input type="submit" value="Ok" class="btn btn-primary btn-block">
+                    </form>
+                </div>
+             </div>
+             <div id="work-list" class="col-md-8">
+               
+            </div>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
