@@ -25,7 +25,7 @@ class UI {
                 <div class="card-header">
                     ${item.hour}:${item.minute} ${item.meridiem}
                 </div>
-                <div class="card-body row">
+                <div class="card-body row card-list">
                     <div class="workResume col-md-9 active">
                      ${item.work} | ${item.place} 
                     </div>
@@ -51,9 +51,10 @@ class UI {
         if(element.name === 'done') {
             var a = element.parentElement.parentElement;
             var div = a.querySelector('.workResume');
-            div.className += ' strike';
-            var b = element.parentElement;
-            b.querySelector('.doneB').remove();
+            div.classList.toggle('strike');
+            a.classList.toggle('opacity');
+            //var b = element.parentElement;
+            //b.querySelector('.doneB').remove();
         }
     }
 
